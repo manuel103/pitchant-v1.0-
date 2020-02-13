@@ -1,0 +1,49 @@
+<!-- begin:: Page -->
+{% include 'layout_index.html' %}
+<!--[html-partial:include:{"file":"partials/_header/base-mobile.html"}]/-->
+{% include 'partials/_header/base-mobile.html' %}
+
+<div class="kt-grid kt-grid--hor kt-grid--root">
+	<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+
+		<!--[html-partial:include:{"file":"partials/_aside/base.html"}]/-->
+		{% include 'partials/_aside/base.html' %}
+		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+
+			<!--[html-partial:include:{"file":"partials/_header/base.html"}]/-->
+			{% include 'partials/_header/base.html' %}
+
+			<div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+				<!--[html-partial:include:{"file":"partials/_subheader/subheader-v1.html"}]/-->
+				{% include 'partials/_subheader/subheader-v1.html' %}
+
+				{% block content %}
+				{% include 'partials/_content/base.html' %}
+				{% endblock %}
+				
+			</div>
+
+			<!--[html-partial:include:{"file":"partials/_footer/base.html"}]/-->
+			{% include 'partials/_footer/base.html' %}
+
+		</div>
+	</div>
+</div>
+
+<!-- end:: Page -->
+
+<!--[html-partial:include:{"file":"partials/_quick-panel.html"}]/-->
+{% include 'partials/_quick-panel.html' %}
+
+<!--[html-partial:include:{"file":"partials/_scrolltop.html"}]/-->
+{% include 'partials/_scrolltop.html' %}
+
+<!--[html-partial:include:{"file":"partials/_toolbar.html"}]/-->
+
+
+<!--[html-partial:include:{"file":"partials/_demo-panel.html"}]/-->
+{% include 'partials/_demo-panel.html' %}
+
+<!--[html-partial:include:{"file":"partials/_chat.html"}]/-->
+{% include 'partials/_chat.html' %}

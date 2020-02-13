@@ -1,0 +1,30 @@
+{% for location in locations %}
+<tr>
+  <td>{{ location.office_name }}</td>
+  <td>{{ location.country }}</td>
+  <td>{{ location.street_address }}</td>
+  <td>{{ location.apt_suite }}</td>
+  <td>{{ location.city }}</td>
+  <td>{{ location.zip_code }}</td>
+  <td>{{ location.office_phone }}</td>
+
+  <td align="center">
+    <button class="btn btn-sm btn-clean btn-icon btn-icon-md js-update-location"
+      data-url="{% url 'location_update' location.id %}" title="Edit">
+      <i class="la la-edit"></i>
+    </button>
+  </td>
+
+  <td align="center">
+    <button class="btn btn-sm btn-clean btn-icon btn-icon-md js-delete-location" 
+    title="Delete" data-url="{% url 'location_delete' location.id %}">
+      <i class="la la-trash"></i>
+    </button>
+  </td>
+  
+</tr>
+{% empty %}
+<tr>
+  <td colspan="12" class="text-center bg-warning">No Locations Available</td>
+</tr>
+{% endfor %}
