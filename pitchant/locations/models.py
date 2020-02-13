@@ -10,3 +10,6 @@ class Location(models.Model):
     zip_code = models.CharField(max_length=50)
     office_phone = models.CharField(max_length=50)
     
+class Department(models.Model):
+    department_name = models.CharField(max_length=50)
+    department_code = models.CharField(max_length=20)

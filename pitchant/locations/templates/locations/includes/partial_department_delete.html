@@ -1,0 +1,15 @@
+<form method="post" action="{% url 'department_delete' department.id %}" class="js-department-delete-form">
+    {% csrf_token %}
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Delete department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </button>
+    </div>
+    <div class="modal-body">
+      <p class="lead">Are you sure you want to delete the <strong>{{ department.department_name }}</strong> department ? All work positions assigned to the {{ department.department_name }} department will also be removed.</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-danger">Delete location</button>
+    </div>
+  </form>

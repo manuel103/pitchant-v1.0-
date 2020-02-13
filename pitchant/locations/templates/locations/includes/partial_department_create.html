@@ -1,0 +1,15 @@
+<form method="post" action="{% url 'department_create' %}" class="js-department-create-form">
+    {% csrf_token %}
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Add department</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      </button>
+  </div>
+    <div class="modal-body">
+      {% include 'locations/includes/partial_department_form.html' %}
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="submit" class="btn btn-primary">Create department</button>
+    </div>
+  </form>
